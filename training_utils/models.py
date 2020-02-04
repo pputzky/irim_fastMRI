@@ -1,5 +1,6 @@
 import torch
 
+from fastMRI.data import transforms
 from irim import IRIM, MemoryFreeInvertibleModule
 from irim.rim import RIM
 
@@ -12,7 +13,8 @@ class RescaleByStd(object):
 
     def forward(self, data, gamma=None):
         if gamma is None:
-            gamma = data.std(dim=list(range(1,data.dim())), keepdim=True) + self.slack
+            gamma = transforms.complex_center_crop(data, (320, 320)).std(dim=list(range(1, data.dim())),
+                                                                         keepdim=True) + self.slack
         data = data / gamma
         return data, gamma
 
