@@ -1,0 +1,8 @@
+h5py
+numpy
+runstats
+scikit-image==0.14.0
+tensorboard>=1.14
+torchvision
+torch>=1.3
+xmltodict

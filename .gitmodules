@@ -1,0 +1,6 @@
+[submodule "external/fastMRI"]
+	path = external/fastMRI
+	url = https://github.com/facebookresearch/fastMRI.git
+[submodule "external/invertible_rim"]
+	path = external/invertible_rim
+	url = https://github.com/pputzky/invertible_rim.git
