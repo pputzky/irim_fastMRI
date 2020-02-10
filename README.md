@@ -1,7 +1,7 @@
 # i-RIM for fastMRI 
 Official implementation of the i-RIM applied to the [fastMRI dataset](https://fastmri.org)
 as described in [*Invert to Learn to Invert*](http://papers.nips.cc/paper/8336-invert-to-learn-to-invert)
-and [*i-RIM applied to the fastMRI challenge*](https://arxiv.org/abs/1910.08952).
+and [*i-RIM applied to the fastMRI challenge*](https://arxiv.org/abs/1910.08952). Pre-trained models can be found under [Releases](https://github.com/pputzky/irim_fastMRI/releases/).
 
 
 See some example reconstructions here:
@@ -63,7 +63,7 @@ python -m scripts.train_model \
 ```bash
 python -m scripts.run_model --challenge singlecoil --batch-size 8 \
 --data-path $DATA_PATH --checkpoint $CHECKPOINT_DIR/best_model.pt \
---out-dir $OUTPUT_DIR --data-split val
+--out-dir $OUTPUT_DIR --data-split val --mask-kspace
 ```
 ##### Evaluate reconstructions
 ```bash
