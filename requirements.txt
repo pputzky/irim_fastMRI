@@ -1,7 +1,7 @@
-h5py
+h5py==2.8.0
 numpy
 runstats
-scikit-image==0.14.0
+scikit-image==0.16.2
 tensorboard>=1.14
 torchvision
 torch>=1.3
